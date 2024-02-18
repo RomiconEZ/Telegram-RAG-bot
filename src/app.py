@@ -29,16 +29,20 @@ from telegram import ForceReply, Update
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 
 TOKEN = os.environ['TG_BOT_TOKEN']
+START_TEXT = '''
+Здравствуйте! Спасибо что выбрали нашу Турфирму! \nЯ ваш личный ассистент и с удовольствием помогу вам узнать информацию о нас.\n\n
+/help - чтобы узнать о нас побольше\n
+'''
+HELP_TEXT = '''
+Вы можете узнать адрес, номер телефона, e-mail и сайт нашего турагенства, если спросите это у ассистента.
+'''
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
     await update.message.reply_html(
-        rf'''
-        Здравствуйте! Спасибо что выбрали нашу Турфирму! 
-        Я ваш личный ассистент и с удовольствием помогу вам узнать информацию о нас.
-        ''',
+        START_TEXT,
         reply_markup=ForceReply(selective=True),
     )
 
@@ -46,10 +50,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /help is issued."""
     response = [
-        '''
-        Вы можете узнать адрес, номер телефона, e-mail и сайт нашего турагенства,
-        если спросите это у ассистента.
-        '''
+        HELP_TEXT
     ]
     for i in response:
         await update.message.reply_text(i)
@@ -61,16 +62,11 @@ async def bot_dialog(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
 
     # Инициализация истории, если она еще не создана
     if 'history' not in context.user_data:
-        context.user_data['history'] = [
-            {"role": "system",
-             "content": "You are an intelligent assistant. You always provide well-reasoned answers that are both "
-                        "correct"
-                        "and helpful."}
-        ]
+        context.user_data['history'] = []
 
     user_tg = update.effective_user
     user = {'user_id': user_tg.id, 'user_name': user_tg.username}
-    bot_response = dialog_router(update.message.text, user, context, client, vector_db)
+    bot_response = dialog_router(update.message.text, user, context.user_data, client, vector_db)
     await update.message.reply_text(bot_response)
 
 
