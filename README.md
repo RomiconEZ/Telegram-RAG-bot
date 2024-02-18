@@ -53,6 +53,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project / О проекте
+
+Link to project in GitHub: https://github.com/RomiconEZ/Telegram-RAG-bot
+
 Данный проект создан в рамках МегаШколы ИТМО по треку ИИ.
 Разработан работающий прототип RAG-системы, который демонстрирует улучшение качества ответов с помощью методов извлечения информации из внешних источников данных. 
 Прототип представлен в виде кода с документацией, включая инструкции по установке, настройке и использованию системы.
@@ -146,16 +149,16 @@ Roman Neronov:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/RomiconEZ/README-template.svg?style=for-the-badge
-[contributors-url]: https://github.com/RomiconEZ/README-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/RomiconEZ/README-template.svg?style=for-the-badge
-[forks-url]: https://github.com/RomiconEZ/README-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/RomiconEZ/README-template.svg?style=for-the-badge
-[stars-url]: https://github.com/RomiconEZ/README-template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/RomiconEZ/README-template.svg?style=for-the-badge
-[issues-url]: https://github.com/RomiconEZ/README-template/issues
-[license-shield]: https://img.shields.io/github/license/RomiconEZ/README-template.svg?style=for-the-badge
-[license-url]: https://github.com/RomiconEZ/README-template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/RomiconEZ/Telegram-RAG-bot.svg?style=for-the-badge
+[contributors-url]: https://github.com/RomiconEZ/Telegram-RAG-bot/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/RomiconEZ/Telegram-RAG-bot.svg?style=for-the-badge
+[forks-url]: https://github.com/RomiconEZ/Telegram-RAG-bot/network/members
+[stars-shield]: https://img.shields.io/github/stars/RomiconEZ/Telegram-RAG-bot.svg?style=for-the-badge
+[stars-url]: https://github.com/RomiconEZ/Telegram-RAG-bot/stargazers
+[issues-shield]: https://img.shields.io/github/issues/RomiconEZ/Telegram-RAG-bot.svg?style=for-the-badge
+[issues-url]: https://github.com/RomiconEZ/Telegram-RAG-bot/issues
+[license-shield]: https://img.shields.io/github/license/RomiconEZ/Telegram-RAG-bot.svg?style=for-the-badge
+[license-url]: https://github.com/RomiconEZ/Telegram-RAG-bot/blob/master/LICENSE.txt
 [product-screenshot]: images/mainlogo.jpg
 
 
